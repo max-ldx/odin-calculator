@@ -1,3 +1,9 @@
+const expression = {
+    operator: null,
+    firstOperand: null,
+    secondOperand: null
+}
+
 function add(firstOperand, secondOperand) {
     return firstOperand + secondOperand;
 }
