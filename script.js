@@ -4,20 +4,19 @@ const expression = {
     secondOperand: null
 }
 
-function add(firstOperand, secondOperand) {
-    return firstOperand + secondOperand;
+const operations = {
+    "+": (firstOperand, secondOperand) => firstOperand + secondOperand,
+    "-": (firstOperand, secondOperand) => firstOperand - secondOperand,
+    "*": (firstOperand, secondOperand) => firstOperand * secondOperand,
+    "/": (firstOperand, secondOperand) => {
+        if (secondOperand === 0) throw new RangeError("Cannot divide by 0.");
+
+        return firstOperand / secondOperand;
+    }
 }
 
-function subtract(firstOperand, secondOperand) {
-    return firstOperand - secondOperand;
-}
+function operate(operator, firstOperand, secondOperand) {
+    if (!(operator in operations)) throw new RangeError("Invalid operator.");
 
-function multiply(firstOperand, secondOperand) {
-    return firstOperand * secondOperand;
-}
-
-function divide(firstOperand, secondOperand) {
-    if (secondOperand === 0) throw new RangeError("Cannot divide by 0.");
-
-    return firstOperand / secondOperand;
+    return operations[operator](firstOperand, secondOperand);
 }
