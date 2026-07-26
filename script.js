@@ -4,6 +4,10 @@ const expression = {
     secondOperand: null
 }
 
+const display = {
+    value: ""
+}
+
 const operations = {
     "+": (firstOperand, secondOperand) => firstOperand + secondOperand,
     "-": (firstOperand, secondOperand) => firstOperand - secondOperand,
@@ -13,6 +17,19 @@ const operations = {
 
         return firstOperand / secondOperand;
     }
+}
+
+const digits = {
+    "zero": 0,
+    "one": 1,
+    "two": 2,
+    "three": 3,
+    "four": 4,
+    "five": 5,
+    "six": 6,
+    "seven": 7,
+    "eight": 8,
+    "nine": 9
 }
 
 function operate(operator, firstOperand, secondOperand) {

@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+#calculator {
+    box-sizing: content-box;
+    width: 17.5rem;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 2px solid red;
+    border-radius: 16px;
+}
+
+#display {
+    flex-basis: 4rem;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+#keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.key {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+#clear,
+#zero {
+    width: 8.5rem;
+}
